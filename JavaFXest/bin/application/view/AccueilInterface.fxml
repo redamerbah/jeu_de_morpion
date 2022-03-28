@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="316.0" prefWidth="605.0" styleClass="anchorPane" stylesheets="" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.AccueilController">
+    <children>
+        <Button fx:id="IABtn" layoutX="217.0" layoutY="113.0" mnemonicParsing="false" onAction="#OnClickIABtn" prefHeight="29.0" prefWidth="171.0" text="JOUER CONTRE L'IA" />
+
+        <Text fx:id="text" layoutX="2.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIC TAC TOE" textAlignment="CENTER" wrappingWidth="602.0">
+         <font>
+            <Font size="36.0" />
+         </font></Text>
+      <Button fx:id="HumanBtn" layoutX="217.0" layoutY="158.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="171.0" text="JOUER CONTRE L'HUMAIN" />
+      <MenuBar layoutY="2.0" prefHeight="26.0" prefWidth="602.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="New" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#EditModels" text="Edit Models" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+    </children>
+</AnchorPane>
