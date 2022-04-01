@@ -17,7 +17,7 @@
             <Font size="36.0" />
          </font></Text>
       <Button fx:id="HumanBtn" layoutX="217.0" layoutY="158.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="171.0" text="JOUER CONTRE L'HUMAIN" />
-      <MenuBar layoutY="2.0" prefHeight="26.0" prefWidth="602.0">
+      <MenuBar layoutX="2.0" layoutY="1.0" prefHeight="26.0" prefWidth="602.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
@@ -27,6 +27,7 @@
           <Menu mnemonicParsing="false" text="Edit">
             <items>
                   <MenuItem mnemonicParsing="false" onAction="#EditModels" text="Edit Models" />
+                  <MenuItem mnemonicParsing="false" onAction="#EditConfigs" text="Edit configuration" />
             </items>
           </Menu>
         </menus>

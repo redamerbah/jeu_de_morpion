@@ -1,6 +1,9 @@
 package application.controller;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 
 import javax.print.DocFlavor.URL;
 
@@ -75,6 +78,24 @@ public class AccueilController {
 	        
 	    }
 	    
+	    @FXML
+	    void EditConfigs(ActionEvent event) throws IOException {
+	    	/*
+	    	//URL url = new File("/application/view/PlayerVsIA.fxml").toURI().toURL();
+			 //Parent root = FXMLLoader.load(url);
+	    	stage=(Stage) ((Node)event.getSource()).getScene().getWindow();
+	    	scene=new Scene(root);
+	    	stage.setScene(root);*/ 
+	    	
+	    	Parent root = FXMLLoader.load(getClass().getResource("/application/view/EditingConfigs.fxml"));
+	        Stage stage=new Stage();
+	        stage.setTitle("Models");
+	        stage.setScene(new Scene(root));
+	        stage.setResizable(false);
+	        stage.show(); 
+	    	
+	        
+	    
 	    /*void OnClickHumanBtn(ActionEvent event) throws IOException {
 	    	Parent root = FXMLLoader.load(getClass().getResource("/application/view/PlayerVsPlayer.fxml"));
 	        Stage stage=new Stage();
@@ -85,5 +106,6 @@ public class AccueilController {
 	    
 
 	    }*/
+	    }
 
 }

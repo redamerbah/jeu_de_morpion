@@ -21,7 +21,6 @@ public class ModelsController {
 	
 	
 	public void initialize(){
-		
 	deleteBtn.setDisable(true);
     ModelsList.getSelectionModel().selectedItemProperty().addListener(
     		new ChangeListener<String>(){
@@ -46,7 +45,6 @@ public class ModelsController {
         }
     } else {
         System.err.println("Nom de repertoire invalide");
-        
     }
 	
 	
