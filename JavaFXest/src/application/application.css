@@ -1,1 +1,68 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.buttonblue{
+    -fx-background-color:
+            #000000,
+            linear-gradient(#7ebcea, #2f4b8f),
+            linear-gradient(#426ab7, #263e75),
+            linear-gradient(#395cab, #223768);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight:bold;
+}
+
+.root{
+    
+    -fx-background-size: cover;
+}
+
+.menu .label{
+    -fx-font-size: 13.0 pt;
+    -fx-padding: 10.0px;
+    -fx-font-family: "Bookman Old Style";
+    -fx-font-weight: bold;
+    -fx-text-fill: linear-gradient(#36bbb0, #001fe6),
+    linear-gradient(#1387c5, #0aa5d2),
+    linear-gradient(#001fe6, #1387c5),
+    linear-gradient(#36bbb0 0%, #36bbb0 50%, #001fe6 100%),
+    linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));
+
+
+}
+
+.menu-bar{
+}
+
+
+
+.anchobackground{
+    -fx-background-image: url("../images/tic-tac-toe-back.jpg");
+    -fx-background-size: cover;
+}
+
+
+.text-field {
+    -fx-accent: -fx-primary-color;
+
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-background-radius: 0;
+}
+.text-field:focused {
+    -fx-background-color: -fx-primary-color, white;
+}
+
+
+.imageviewhumain{
+    -fx-image: url("images/kisspng-portable-network-graphics-human-computer-icons-vec-icons-for-free-guy-icon-dude-icon-hipster-icon-5c055485275680.7658152815438531891611.png");
+
+
+}
+
+.imageviewRobot{
+    -fx-image: url("images/robot.png");
+
+
+}

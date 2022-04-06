@@ -20,7 +20,9 @@ import javafx.scene.control.ToggleGroup;
 
 public class ConfigsController {
 
-	 @FXML
+	 
+
+	@FXML
 	 private TextField Hfield;
 
 	 @FXML
@@ -65,7 +67,7 @@ public class ConfigsController {
         }
         else if (hardLVL2.isSelected()) {
     		String content="D:"+Hfield.getText()+":"+LRfield.getText()+":"+Lfield.getText();
-    		FileWriter fw = new FileWriter(file.getAbsoluteFile());
+    		FileWriter fw = new FileWriter(file2.getAbsoluteFile());
     		BufferedWriter bw = new BufferedWriter(fw);
     		bw.write(facile);
     		bw.write("\r\n");
@@ -150,8 +152,8 @@ public class ConfigsController {
              				System.out.print("Tets");
              				// change the label
              				Hfield.setText(facileTab[1]);
-             	        	 LRfield.setText(facileTab[2]);
-             	        	 Lfield.setText(facileTab[3]);
+             	        	LRfield.setText(facileTab[2]);
+             	        	Lfield.setText(facileTab[3]);
              			}
              			else if (s.equals("HARD")) {
              				Hfield.setText(difficileTab[1]);

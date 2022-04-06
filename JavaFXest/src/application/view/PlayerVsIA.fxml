@@ -28,7 +28,7 @@
             <Image url="@../../../resources/images/rpa-robotic-process-automation.png" />
          </image>
       </ImageView>
-      <TextField layoutX="62.0" layoutY="253.0" promptText="Name player" />
+      <TextField fx:id="namePlayer" layoutX="62.0" layoutY="253.0" promptText="Name player" />
       <TextField alignment="CENTER" disable="true" editable="false" layoutX="390.0" layoutY="255.0" text="ROBOT IA " />
       <Button fx:id="ButtonStart_HumanVsIA" layoutX="230.0" layoutY="312.0" mnemonicParsing="false" onAction="#StartLoading" prefHeight="44.0" prefWidth="122.0" text="START" textAlignment="CENTER" />
    </children>

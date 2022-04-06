@@ -22,12 +22,12 @@ import javafx.stage.Stage;
 public class AccueilController {
 	 	@FXML
 	    private Button IABtn;
+	 	
+	 	@FXML
+	    private Button HumanBtn;
 
 	    @FXML
 	    private AnchorPane anchorPane;
-
-	    @FXML
-	    private Button buttonCon1;
 
 	    @FXML
 	    private Text text;
@@ -36,6 +36,14 @@ public class AccueilController {
 	    private Scene scene;
 	    private Parent root;
 	    */
+	    @FXML
+		 void initialize() {
+		   	//namePlayer.setText("Player 1");
+		   	//System.out.println("Je suis :"+namePlayer.getText());
+	    	IABtn.setFocusTraversable(false);
+	    	HumanBtn.setFocusTraversable(false);
+		    	}
+	    
  
 	    @FXML
 	    void OnClickIABtn(ActionEvent event) throws IOException {
@@ -93,19 +101,21 @@ public class AccueilController {
 	        stage.setScene(new Scene(root));
 	        stage.setResizable(false);
 	        stage.show(); 
-	    	
+	    }
 	        
-	    
-	    /*void OnClickHumanBtn(ActionEvent event) throws IOException {
-	    	Parent root = FXMLLoader.load(getClass().getResource("/application/view/PlayerVsPlayer.fxml"));
+	    @FXML
+	    void OnClickHumanBtn(ActionEvent event) throws IOException {
+	    	/*SParent root = FXMLLoader.load(getClass().getResource("/application/view/PlayerVsPlayer.fxml"));
 	        Stage stage=new Stage();
-	        stage.setTitle("Player Vs Player");
+	        stage.setTitle("Player vs player");
 	        stage.setScene(new Scene(root));
 	        stage.setResizable(false);
-	        stage.show();	
-	    
-
-	    }*/
+	        stage.show(); 
+	        */
+	        Parent root= FXMLLoader.load(getClass().getResource("/application/view/PlayerVsPlayer.fxml"));
+	    	Stage window=(Stage) HumanBtn.getScene().getWindow();
+	    	window.setTitle("Player Vs Player");
+	    	window.setScene(new Scene(root));
+	    	
 	    }
-
 }

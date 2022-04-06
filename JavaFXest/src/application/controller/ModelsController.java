@@ -19,7 +19,7 @@ public class ModelsController {
 	@FXML
 	private Button deleteBtn;
 	
-	
+
 	public void initialize(){
 	deleteBtn.setDisable(true);
     ModelsList.getSelectionModel().selectedItemProperty().addListener(
@@ -55,9 +55,9 @@ public class ModelsController {
 	        File fileDelete = new File("resources/models/"+model);
 	        ModelsList.getItems().removeAll(ModelsList.getSelectionModel().getSelectedItems());
 	        if(fileDelete.delete()){
-	            System.out.println(fileDelete.getName() + " est supprimé.");
+	            System.out.println(fileDelete.getName() + " supprimé.");
 	        }else{
-	            System.out.println("Opération de suppression echoué");
+	            System.out.println(" echoué");
 	        }
 
 	    }

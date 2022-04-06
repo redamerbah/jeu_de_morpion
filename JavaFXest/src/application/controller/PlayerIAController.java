@@ -8,12 +8,14 @@ import java.util.Scanner;
 
 import ai.MultiLayerPerceptron;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import ai.*;
 import application.controller.FirstController;
@@ -21,15 +23,29 @@ import application.controller.FirstController;
 
 public class PlayerIAController {
 	public static MultiLayerPerceptron m;
+	public static String namePlayer1;
 	
 	 @FXML
-	    private Button ButtonStart_HumanVsIA;
+	 private Button ButtonStart_HumanVsIA;
 	 
 	 @FXML
 	 private RadioButton easyLvl;
 
 	 @FXML
 	 private RadioButton hardLvl;
+	 
+	 @FXML 
+	 private TextField namePlayer;
+	 
+	 @FXML
+	 void initialize() {
+	   	//namePlayer.setText("Player 1");
+	   	//System.out.println("Je m'appelle :"+namePlayer.getText());
+		 easyLvl.setFocusTraversable(false);
+		 namePlayer.setFocusTraversable(false);
+		 ButtonStart_HumanVsIA.setFocusTraversable(false);
+
+	    	}
 
 	    @FXML
 	    void StartLoading(ActionEvent event) throws IOException {
@@ -49,10 +65,7 @@ public class PlayerIAController {
 	        	 FirstController.h=Integer.parseInt(facileTab[1]);
 	        	 FirstController.lr=Double.parseDouble(facileTab[2]);
 	        	 FirstController.l=Integer.parseInt(facileTab[3]);
-	        	 System.out.println("****************** FACILE ******************");
-	        	 
-	        	 
-	        	 
+	        	 System.out.println("****************** FACILE ******************");	        	 
 	         }else if (hardLvl.isSelected()) {
 	        	 FirstController.h=Integer.parseInt(difficileTab[1]);
 	        	 FirstController.lr=Double.parseDouble(difficileTab[2]);
@@ -62,11 +75,11 @@ public class PlayerIAController {
 	    	
 	    	
 	    	
-	    	
-
-	    	
-            String path="resources/models/"+"ModelLearningSave-H"+FirstController.h+"-LR"+FirstController.lr+"-L"+FirstController.l+".srl";
-            if(new File(path).exists()){
+            
+	         String path="resources/models/"+"ModelLearningSave-H"+FirstController.h+"-LR"+FirstController.lr+"-L"+FirstController.l+".srl";
+	         namePlayer1=namePlayer.getText();
+	         //System.out.println("Je m'appelle :"+namePlayer1);
+	         if(new File(path).exists()){
                 m=MultiLayerPerceptron.load(path);
                 /*Parent root = FXMLLoader.load(getClass().getResource("/application/view/StartGameIA.fxml"));
     	        Stage stage=new Stage();
@@ -75,8 +88,10 @@ public class PlayerIAController {
     	        stage.setResizable(false);
     	        stage.show(); */
     	        
-    	        Parent root= FXMLLoader.load(getClass().getResource("/application/view/StartGameIA.fxml"));
-            	Stage window=(Stage) ButtonStart_HumanVsIA.getScene().getWindow();
+    	        //Parent root= FXMLLoader.load(getClass().getResource("/application/view/StartGameIA.fxml"));
+                Parent root= FXMLLoader.load(getClass().getResource("/application/view/StartGameIA.fxml"));
+            	
+                Stage window=(Stage) ButtonStart_HumanVsIA.getScene().getWindow();
             	window.setTitle("LET'S PLAY");
             	window.setScene(new Scene(root));
                 
@@ -97,6 +112,20 @@ public class PlayerIAController {
             	
             	
             }
+            
+            
+            /*ButtonStart_HumanVsIA.setOnAction((EventHandler<ActionEvent>) new EventHandler<ActionEvent>() {
+            	public void handle(ActionEvent event) {
+            		namePlayer1=namePlayer.getText();
+            		//System.out.println();
+            		System.out.println("Je m'appelle :"+namePlayer.getText());
+            		}
+            	}
+            );*/
+            //System.out.println("TESTTTTTTTTTTT");
+            
+            
+            
 
 	    }
 }

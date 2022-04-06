@@ -8,16 +8,17 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="316.0" prefWidth="605.0" styleClass="anchorPane" stylesheets="" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.AccueilController">
+<AnchorPane fx:id="anchorPane" prefHeight="316.0" prefWidth="605.0" styleClass="anchobackground" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.AccueilController">
     <children>
-        <Button fx:id="IABtn" layoutX="217.0" layoutY="113.0" mnemonicParsing="false" onAction="#OnClickIABtn" prefHeight="29.0" prefWidth="171.0" text="JOUER CONTRE L'IA" />
+        <Button fx:id="IABtn" layoutX="323.0" layoutY="251.0" mnemonicParsing="false" onAction="#OnClickIABtn" prefHeight="42.0" prefWidth="258.0" styleClass="buttonblue" stylesheets="@../application.css" text="JOUER CONTRE L'IA" />
+         <Button fx:id="HumanBtn" layoutX="24.0" layoutY="251.0" mnemonicParsing="false" onAction="#OnClickHumanBtn" prefHeight="42.0" prefWidth="258.0" styleClass="buttonblue" stylesheets="@../application.css" text="JOUER CONTRE L'HUMAIN" />
 
-        <Text fx:id="text" layoutX="2.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIC TAC TOE" textAlignment="CENTER" wrappingWidth="602.0">
+        <Text fx:id="text" layoutX="2.0" layoutY="104.0" strikethrough="true" stroke="#1668de" strokeType="OUTSIDE" strokeWidth="2.0" text="TIC TAC TOE" textAlignment="CENTER" wrappingWidth="602.0">
          <font>
             <Font size="36.0" />
          </font></Text>
-      <Button fx:id="HumanBtn" layoutX="217.0" layoutY="158.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="171.0" text="JOUER CONTRE L'HUMAIN" />
-      <MenuBar layoutX="2.0" layoutY="1.0" prefHeight="26.0" prefWidth="602.0">
+     
+      <MenuBar prefHeight="44.0" prefWidth="605.0" styleClass="menu" stylesheets="@../application.css">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>

@@ -16,7 +16,7 @@ public class Main extends Application {
 			//Scene scene = new Scene(root,400,400);
 			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			
-			Parent root = FXMLLoader.load(getClass().getResource("view/EditingConfigs.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("view/AccueilInterface.fxml"));
 			Scene scene =  new Scene(root);
 			
 			primaryStage.setTitle("Morpion");

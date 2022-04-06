@@ -5,9 +5,8 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.StartGameIAController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="241.0" layoutY="50.0" prefHeight="300.0" prefWidth="300.0">
          <children>
@@ -32,17 +31,7 @@
             <Image url="@../../../resources/images/rpa-robotic-process-automation.png" />
          </image>
       </ImageView>
-      <Label fx:id="namePlayerLabel" alignment="CENTER" layoutX="56.0" layoutY="131.0" prefHeight="30.0" prefWidth="100.0" text="PLAYER 1" />
+      <Label fx:id="namePlayerLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="78.0" layoutY="132.0" text="PLAYER 1" />
       <Label layoutX="84.0" layoutY="234.0" text="ROBOT" />
-      <Label fx:id="namePlayerLabel1" alignment="CENTER" layoutX="53.0" layoutY="155.0" prefHeight="30.0" prefWidth="100.0" text="X" textFill="#362fff">
-         <font>
-            <Font size="23.0" />
-         </font>
-      </Label>
-      <Label fx:id="namePlayerLabel11" alignment="CENTER" layoutX="53.0" layoutY="200.0" prefHeight="30.0" prefWidth="100.0" text="0" textFill="#ff3030">
-         <font>
-            <Font size="23.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>
