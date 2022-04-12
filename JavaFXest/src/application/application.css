@@ -14,8 +14,21 @@
     -fx-font-weight:bold;
 }
 
+
+.buttongame{
+    -fx-background-color:
+            #000000,
+            linear-gradient(#36AB9E, #11E7CF);
+            /*linear-gradient(#426ab7, #263e75),*/
+            /*linear-gradient(#395cab, #223768);*/
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
+    -fx-font-weight:bold;
+}
+
 .root{
-    
+    -fx-background-image: url("images/tic-tac-toe-game-wallpaper-preview1.jpg");
     -fx-background-size: cover;
 }
 
@@ -39,30 +52,27 @@
 
 
 .anchobackground{
-    -fx-background-image: url("../images/tic-tac-toe-back.jpg");
+    -fx-background-image: url("../../resources/images/TicTacToe/tic-tac-toe-back.jpg");
     -fx-background-size: cover;
 }
 
 
-.text-field {
-    -fx-accent: -fx-primary-color;
-
-    -fx-background-insets: 0, 0 0 1 0;
-    -fx-background-radius: 0;
-}
-.text-field:focused {
-    -fx-background-color: -fx-primary-color, white;
+.anchobackground0{
+    -fx-background-image: url("../../resources/images/TicTacToe/tic-tac-toe-back0.jpg");
+    -fx-background-size: cover;
 }
 
 
-.imageviewhumain{
-    -fx-image: url("images/kisspng-portable-network-graphics-human-computer-icons-vec-icons-for-free-guy-icon-dude-icon-hipster-icon-5c055485275680.7658152815438531891611.png");
 
 
-}
-
-.imageviewRobot{
-    -fx-image: url("images/robot.png");
-
+.tab-game{
+    -fx-background-color:
+            #000000,
+            linear-gradient(#7ebcea, #72a9b7),
+            linear-gradient(#686c75, #eeeff5),
+            linear-gradient(#67759a, #9db0da);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
 
 }

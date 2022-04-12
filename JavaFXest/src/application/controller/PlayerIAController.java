@@ -1,24 +1,34 @@
 package application.controller;
 
+import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Scanner;
+//import com.gluonhq.charm.glisten.control.Icon;
+
+import javax.imageio.ImageIO;
+import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 
 import ai.MultiLayerPerceptron;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import ai.*;
-import application.controller.FirstController;
+import javafx.stage.Stage;
 
 
 public class PlayerIAController {
@@ -37,20 +47,39 @@ public class PlayerIAController {
 	 @FXML 
 	 private TextField namePlayer;
 	 
+	 public static String name1;
+	 
 	 @FXML
-	 void initialize() {
-	   	//namePlayer.setText("Player 1");
-	   	//System.out.println("Je m'appelle :"+namePlayer.getText());
+	 private Button ReplayBtn;
+	 
+	 @FXML
+	 private Button BackBtn;
+	 
+	 @FXML
+	 private ImageView Icn;
+	 
+	 @FXML
+	 void initialize() throws IOException {
 		 easyLvl.setFocusTraversable(false);
 		 namePlayer.setFocusTraversable(false);
 		 ButtonStart_HumanVsIA.setFocusTraversable(false);
+		 
+	    }
+	 
 
-	    	}
+	    
+	 @FXML
+	 void OnClickBack3() throws IOException {
+	    	Parent root= FXMLLoader.load(getClass().getResource("/application/view/AccueilInterface.fxml"));
+		    Stage window=(Stage) BackBtn.getScene().getWindow();
+		    window.setTitle("Morpion");
+		    window.setScene(new Scene(root));
+	    }
 
 	    @FXML
 	    void StartLoading(ActionEvent event) throws IOException {
 	    	
-	    	 File file = new File("C:\\Users\\ACHRAF\\eclipse-workspace\\JavaFXest\\resources\\config.txt");
+	    	 File file = new File("resources/config.txt");
 	         BufferedReader br = new BufferedReader(new FileReader(file));
 	         Scanner sc = new Scanner(file);        
 	         String facile=sc.nextLine();
@@ -90,7 +119,6 @@ public class PlayerIAController {
     	        
     	        //Parent root= FXMLLoader.load(getClass().getResource("/application/view/StartGameIA.fxml"));
                 Parent root= FXMLLoader.load(getClass().getResource("/application/view/StartGameIA.fxml"));
-            	
                 Stage window=(Stage) ButtonStart_HumanVsIA.getScene().getWindow();
             	window.setTitle("LET'S PLAY");
             	window.setScene(new Scene(root));
@@ -100,32 +128,10 @@ public class PlayerIAController {
             	
             	Parent root= FXMLLoader.load(getClass().getResource("/application/view/LoadingLayout.fxml"));
     	    	Stage window=(Stage) ButtonStart_HumanVsIA.getScene().getWindow();
-    	    	window.setTitle("Player Vs IA");
+    	    	window.setTitle("Loading...");
     	    	window.setScene(new Scene(root));
-            	
-            	/*Parent root = FXMLLoader.load(getClass().getResource("/application/view/LoadingLayout.fxml"));
-            	Stage stage=new Stage();
-            	stage.setTitle("LOADING...");
-            	stage.setScene(new Scene(root));
-            	stage.setResizable(false);
-            	stage.show(); */ 
-            	
-            	
+           	
             }
-            
-            
-            /*ButtonStart_HumanVsIA.setOnAction((EventHandler<ActionEvent>) new EventHandler<ActionEvent>() {
-            	public void handle(ActionEvent event) {
-            		namePlayer1=namePlayer.getText();
-            		//System.out.println();
-            		System.out.println("Je m'appelle :"+namePlayer.getText());
-            		}
-            	}
-            );*/
-            //System.out.println("TESTTTTTTTTTTT");
-            
-            
-            
 
 	    }
 }

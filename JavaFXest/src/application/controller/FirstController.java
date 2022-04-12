@@ -10,7 +10,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.TextField;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import ai.*;
 
 import java.io.IOException;
@@ -39,9 +41,15 @@ public class FirstController {
     @FXML
     private Button PlayBtn;
     
-    /*@FXML
-    private Button ;
-    */
+    @FXML
+    private Circle Bounce1;
+
+    @FXML
+    private Circle Bounce2;
+    
+    @FXML
+    private Circle Bounce3;
+    
     @FXML
     private TextField textField1;
     
@@ -55,10 +63,14 @@ public class FirstController {
     
     @FXML
     public void initialize() throws InterruptedException, IOException{
-		try {
+    	//new Bounce(Bounce1).setCycleDuration(4).setCycleCount(4).setDelay(Duration.millis(500)).play();
+    	try {
 				System.out.println();
 				System.out.println("START TRAINING ...");
 				System.out.println();
+				
+			
+			
 				int size=9;
 			//
 			//			int[] layers = new int[]{ size, 128, 128, size };
@@ -78,6 +90,7 @@ public class FirstController {
 				HashMap<Integer, Coup> mapDev = Test.loadCoupsFromFile("./resources/train_dev_test/dev.txt");
 				HashMap<Integer, Coup> mapTest = Test.loadCoupsFromFile("./resources/train_dev_test/test.txt");
 				System.out.println("---");
+				
 				//Boutton n'est pas accessble(cliquable)
 				PlayBtn.setDisable(true);
 				
@@ -171,9 +184,7 @@ public class FirstController {
                         System.out.println("Error at step " + i + " is " + (error / (double) i));
                         updateMessage("Error at step " + i + " is " + (error / (double) i));
                     }
-                    
                 updateProgress(i,epochs);
-                
                 }
                 error /= epochs;
                 if (epochs < 0){

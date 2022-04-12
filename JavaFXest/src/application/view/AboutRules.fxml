@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="anchobackground0" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.AboutRulesController">
+   <children>
+      <Label fx:id="RulesTitle" layoutX="238.0" layoutY="25.0" text="Rules" textAlignment="CENTER">
+         <font>
+            <Font name="Jokerman" size="46.0" />
+         </font>
+      </Label>
+      <Button fx:id="BackBtn2" layoutX="252.0" layoutY="328.0" minHeight="21.0" minWidth="43.0" mnemonicParsing="false" onAction="#OnClickBack2" prefHeight="36.0" prefWidth="95.0" styleClass="buttonblue" stylesheets="@../application.css" text="Back" />
+      <TextFlow layoutX="107.0" layoutY="141.0" prefHeight="64.0" prefWidth="377.0" textAlignment="CENTER">
+         <children>
+            <TextFlow prefHeight="46.0" prefWidth="390.0" textAlignment="CENTER">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2. Two players alternate marking empty squares, thefirst player marking Xs and the second playermarkinsOs.">
+                     <font>
+                        <Font name="Jokerman" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+         </children>
+      </TextFlow>
+      <TextFlow layoutX="100.0" layoutY="207.0" prefHeight="64.0" prefWidth="390.0" textAlignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3. Hone player places three of the same marks in aruw, that player wins.">
+               <font>
+                  <Font name="Jokerman" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <TextFlow layoutX="107.0" layoutY="271.0" prefHeight="50.0" prefWidth="376.0" textAlignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4. If the spaces are all filled and there is no winner,the game ends in a dras." textAlignment="CENTER" wrappingWidth="320.0775146484375">
+               <font>
+                  <Font name="Jokerman" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <TextFlow layoutX="110.0" layoutY="99.0" prefHeight="36.0" prefWidth="390.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1. Play occurs on a 3 by 3 grid of empty squares." wrappingWidth="318.64337158203125">
+               <font>
+                  <Font name="Jokerman" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+   </children>
+</AnchorPane>

@@ -30,23 +30,16 @@ public class ModelsController {
     	}
     );
 		
-	File file = new File("C:\\Users\\ACHRAF\\eclipse-workspace\\JavaFXest\\resources\\models");
+	File file = new File("resources/models");
 	String liste[] = file.list();
 	if (liste != null) { 
 		ModelsList.getItems().setAll(liste);
         for (int i = 0; i < liste.length; i++) {
-            System.out.println(liste[i]);
-            //ModelsList.getItems().setAll(liste);
-            /*ObservableList<String> items = ModelsList.getItems();
-            String a=liste[i].getName();
-            items.add(a);
-            this.filecount++;*/
-            
+            System.out.println(liste[i]);            
         }
     } else {
         System.err.println("Nom de repertoire invalide");
     }
-	
 	
 	}
 	
@@ -57,11 +50,10 @@ public class ModelsController {
 	        if(fileDelete.delete()){
 	            System.out.println(fileDelete.getName() + " supprimé.");
 	        }else{
-	            System.out.println(" echoué");
+	            System.out.println("Echoué");
 	        }
-
 	    }
-	
+	 
 }
 	
 	

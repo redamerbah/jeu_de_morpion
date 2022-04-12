@@ -7,29 +7,33 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.PlayerIAController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450.0" minWidth="700.0" prefHeight="316.0" prefWidth="605.0" styleClass="anchobackground0" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.PlayerIAController">
    <children>
 
-      <RadioButton fx:id="easyLvl" layoutX="256.0" layoutY="163.0" mnemonicParsing="false" selected="true" text="EASY" textAlignment="CENTER">
+      <RadioButton fx:id="easyLvl" layoutX="303.0" layoutY="180.0" mnemonicParsing="false" selected="true" text="EASY" textAlignment="CENTER">
          <toggleGroup>
             <ToggleGroup fx:id="EasyHard" />
          </toggleGroup></RadioButton>
-      <RadioButton fx:id="hardLvl" layoutX="256.0" layoutY="193.0" mnemonicParsing="false" text="HARD" textAlignment="CENTER" toggleGroup="$EasyHard" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="29.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="169.0" fitWidth="174.0" layoutX="45.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+      <RadioButton fx:id="hardLvl" layoutX="303.0" layoutY="210.0" mnemonicParsing="false" text="HARD" textAlignment="CENTER" toggleGroup="$EasyHard" />
+      <ImageView fitHeight="199.0" fitWidth="187.0" layoutX="92.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../resources/images/human-icon-png-2.png" />
+            <Image url="@../../../resources/images/TicTacToe/Player.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="188.0" fitWidth="187.0" layoutX="375.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="188.0" fitWidth="187.0" layoutX="422.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../resources/images/rpa-robotic-process-automation.png" />
+            <Image url="@../../../resources/images/TicTacToe/Robot.png" />
          </image>
       </ImageView>
-      <TextField fx:id="namePlayer" layoutX="62.0" layoutY="253.0" promptText="Name player" />
-      <TextField alignment="CENTER" disable="true" editable="false" layoutX="390.0" layoutY="255.0" text="ROBOT IA " />
-      <Button fx:id="ButtonStart_HumanVsIA" layoutX="230.0" layoutY="312.0" mnemonicParsing="false" onAction="#StartLoading" prefHeight="44.0" prefWidth="122.0" text="START" textAlignment="CENTER" />
+      <TextField fx:id="namePlayer" layoutX="109.0" layoutY="270.0" promptText="Name player1" />
+      <TextField alignment="CENTER" disable="true" editable="false" layoutX="437.0" layoutY="272.0" text="ROBOT IA " />
+      <Button fx:id="ButtonStart_HumanVsIA" layoutX="370.0" layoutY="337.0" mnemonicParsing="false" onAction="#StartLoading" prefHeight="44.0" prefWidth="151.0" styleClass="buttonblue" stylesheets="@../application.css" text="START" textAlignment="CENTER" />
+      <Button fx:id="BackBtn" layoutX="152.0" layoutY="337.0" minHeight="21.0" minWidth="43.0" mnemonicParsing="false" onAction="#OnClickBack3" prefHeight="44.0" prefWidth="151.0" styleClass="buttonblue" stylesheets="@../application.css" text="Back to menu">
+         <font>
+            <Font name="Jokerman" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

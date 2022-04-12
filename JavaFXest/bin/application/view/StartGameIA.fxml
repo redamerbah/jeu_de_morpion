@@ -7,42 +7,54 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.StartGameIAController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450.0" minWidth="700.0" prefHeight="316.0" prefWidth="605.0" styleClass="anchobackground0" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.StartGameIAController">
    <children>
       <AnchorPane layoutX="241.0" layoutY="50.0" prefHeight="300.0" prefWidth="300.0">
          <children>
-            <Button fx:id="Button0" mnemonicParsing="false" prefHeight="97.0" prefWidth="100.0" />
-            <Button fx:id="Button1" layoutX="100.0" mnemonicParsing="false" prefHeight="97.0" prefWidth="100.0" />
-            <Button fx:id="Button2" layoutX="200.0" mnemonicParsing="false" prefHeight="97.0" prefWidth="100.0" />
-            <Button fx:id="Button3" layoutY="98.0" mnemonicParsing="false" prefHeight="97.0" prefWidth="100.0" />
-            <Button fx:id="Button4" layoutX="100.0" layoutY="98.0" mnemonicParsing="false" prefHeight="97.0" prefWidth="100.0" />
-            <Button fx:id="Button5" layoutX="200.0" layoutY="98.0" mnemonicParsing="false" prefHeight="97.0" prefWidth="100.0" />
-            <Button fx:id="Button6" layoutY="196.0" mnemonicParsing="false" prefHeight="97.0" prefWidth="100.0" />
-            <Button fx:id="Button7" layoutX="101.0" layoutY="196.0" mnemonicParsing="false" prefHeight="97.0" prefWidth="100.0" />
-            <Button fx:id="Button8" layoutX="200.0" layoutY="196.0" mnemonicParsing="false" prefHeight="97.0" prefWidth="100.0" />
+            <Button fx:id="Button0" focusTraversable="false" layoutX="112.0" layoutY="20.0" mnemonicParsing="false" onAction="#Btn0Click" prefHeight="97.0" prefWidth="100.0" styleClass="buttongame" stylesheets="@../application.css" />
+            <Button fx:id="Button1" focusTraversable="false" layoutX="212.0" layoutY="20.0" mnemonicParsing="false" onAction="#Btn1Click" prefHeight="97.0" prefWidth="100.0" styleClass="buttongame" stylesheets="@../application.css" />
+            <Button fx:id="Button2" focusTraversable="false" layoutX="312.0" layoutY="20.0" mnemonicParsing="false" onAction="#Btn2Click" prefHeight="97.0" prefWidth="100.0" styleClass="buttongame" stylesheets="@../application.css" />
+            <Button fx:id="Button3" focusTraversable="false" layoutX="112.0" layoutY="118.0" mnemonicParsing="false" onAction="#Btn3Click" prefHeight="97.0" prefWidth="100.0" styleClass="buttongame" stylesheets="@../application.css" />
+            <Button fx:id="Button4" focusTraversable="false" layoutX="212.0" layoutY="118.0" mnemonicParsing="false" onAction="#Btn4Click" prefHeight="97.0" prefWidth="100.0" styleClass="buttongame" stylesheets="@../application.css" />
+            <Button fx:id="Button5" focusTraversable="false" layoutX="312.0" layoutY="118.0" mnemonicParsing="false" onAction="#Btn5Click" prefHeight="97.0" prefWidth="100.0" styleClass="buttongame" stylesheets="@../application.css" />
+            <Button fx:id="Button6" focusTraversable="false" layoutX="112.0" layoutY="216.0" mnemonicParsing="false" onAction="#Btn6Click" prefHeight="97.0" prefWidth="100.0" styleClass="buttongame" stylesheets="@../application.css" />
+            <Button fx:id="Button7" focusTraversable="false" layoutX="213.0" layoutY="216.0" mnemonicParsing="false" onAction="#Btn7Click" prefHeight="97.0" prefWidth="100.0" styleClass="buttongame" stylesheets="@../application.css" />
+            <Button fx:id="Button8" focusTraversable="false" layoutX="312.0" layoutY="216.0" mnemonicParsing="false" onAction="#Btn8Click" prefHeight="97.0" prefWidth="100.0" styleClass="buttongame" stylesheets="@../application.css" />
+            <Label fx:id="winnerName" alignment="CENTER" contentDisplay="CENTER" layoutX="60.0" layoutY="107.0" prefHeight="98.0" prefWidth="404.0" text="PLAYER" textFill="#943e16" visible="false">
+               <font>
+                  <Font name="Jokerman" size="54.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
-      <ImageView fx:id="imagePlayer" fitHeight="82.0" fitWidth="81.0" layoutX="63.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imagePlayer" fitHeight="121.0" fitWidth="126.0" layoutX="106.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../resources/images/human-icon-png-2.png" />
+            <Image url="@../../../resources/images/TicTacToe/Player.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imageIA" fitHeight="82.0" fitWidth="81.0" layoutX="63.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imageIA" fitHeight="113.0" fitWidth="118.0" layoutX="110.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../resources/images/rpa-robotic-process-automation.png" />
+            <Image url="@../../../resources/images/TicTacToe/Robot.png" />
          </image>
       </ImageView>
-      <Label fx:id="namePlayerLabel" alignment="CENTER" layoutX="56.0" layoutY="131.0" prefHeight="30.0" prefWidth="100.0" text="PLAYER 1" />
-      <Label layoutX="84.0" layoutY="234.0" text="ROBOT" />
-      <Label fx:id="namePlayerLabel1" alignment="CENTER" layoutX="53.0" layoutY="155.0" prefHeight="30.0" prefWidth="100.0" text="X" textFill="#362fff">
+      <Label fx:id="namePlayerLabel" alignment="CENTER" layoutX="113.0" layoutY="131.0" prefHeight="30.0" prefWidth="100.0" text="PLAYER 1" visible="false" />
+      <Label layoutX="141.0" layoutY="234.0" text="ROBOT" />
+      <Label fx:id="namePlayerLabel1" alignment="CENTER" layoutX="110.0" layoutY="155.0" prefHeight="30.0" prefWidth="100.0" text="X" textFill="#362fff">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <Label fx:id="namePlayerLabel11" alignment="CENTER" layoutX="53.0" layoutY="200.0" prefHeight="30.0" prefWidth="100.0" text="0" textFill="#ff3030">
+      <Label fx:id="namePlayerLabel11" alignment="CENTER" layoutX="110.0" layoutY="200.0" prefHeight="30.0" prefWidth="100.0" text="0" textFill="#ff3030">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
+      <Label fx:id="TextWinner" alignment="CENTER" layoutX="291.0" layoutY="-34.0" prefHeight="139.0" prefWidth="428.0" text="THE WINNER IS " textAlignment="CENTER" textFill="#943e16" visible="false">
+         <font>
+            <Font name="Jokerman" size="42.0" />
+         </font>
+      </Label>
+      <Button fx:id="ReplayBtn" focusTraversable="false" layoutX="364.0" layoutY="395.0" mnemonicParsing="false" onAction="#Replay" prefHeight="42.0" prefWidth="148.0" styleClass="buttonblue" stylesheets="@../application.css" text="REPLAY" />
+      <Button fx:id="BackBtn" focusTraversable="false" layoutX="167.0" layoutY="395.0" mnemonicParsing="false" onAction="#OnClickBack5" prefHeight="42.0" prefWidth="148.0" styleClass="buttonblue" stylesheets="@../application.css" text="BACK" />
    </children>
 </AnchorPane>

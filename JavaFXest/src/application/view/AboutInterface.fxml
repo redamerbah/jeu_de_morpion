@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="anchobackground0" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="AuthorsTtile" layoutX="187.0" layoutY="29.0" text="AUTHORS" textAlignment="CENTER">
+         <font>
+            <Font name="Jokerman" size="46.0" />
+         </font>
+      </Label>
+      <Label fx:id="AuthorsName1" layoutX="57.0" layoutY="165.0" text="Achraf EL GHARIB">
+         <font>
+            <Font name="Jokerman" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="AuthorsName2" layoutX="373.0" layoutY="165.0" prefHeight="36.0" prefWidth="178.0" text="Reda MERBAH">
+         <font>
+            <Font name="Jokerman" size="23.0" />
+         </font>
+      </Label>
+      <Icon fx:id="BackIcon" content="BACKSPACE" layoutX="34.0" layoutY="41.0" onMouseClicked="#OnClickBack" prefHeight="46.0" prefWidth="56.0" />
+   </children>
+</AnchorPane>

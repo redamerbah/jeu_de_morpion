@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 //import javafx.scene.layout.BorderPane;
 
 
@@ -18,6 +19,8 @@ public class Main extends Application {
 			
 			Parent root = FXMLLoader.load(getClass().getResource("view/AccueilInterface.fxml"));
 			Scene scene =  new Scene(root);
+			//primaryStage.getIcons().add(new Image(getClass().getResource("../../../resources/images/TicTacToe/cross.png").toString(), true));
+			
 			
 			primaryStage.setTitle("Morpion");
 			primaryStage.setScene(scene);

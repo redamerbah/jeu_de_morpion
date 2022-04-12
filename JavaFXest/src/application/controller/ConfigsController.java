@@ -17,6 +17,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.stage.Stage;
 
 public class ConfigsController {
 
@@ -42,23 +43,24 @@ public class ConfigsController {
 
 	 @FXML
 	 void EditConfigs(ActionEvent event) throws IOException {
-		 File file = new File("C:\\Users\\ACHRAF\\eclipse-workspace\\JavaFXest\\resources\\config.txt");
+		 File file = new File("resources/config.txt");
          BufferedReader br = new BufferedReader(new FileReader(file));
          Scanner sc = new Scanner(file);        
          String facile=sc.nextLine();
          String difficile=sc.nextLine();
          String[] facileTab = facile.split(":"); 
          String[] difficileTab = difficile.split(":"); 
-		 File file2 = new File("C:\\Users\\ACHRAF\\eclipse-workspace\\JavaFXest\\resources\\config2.txt");
+		 /*File file2 = new File("resources/config2.txt");
 		 
      	 
      	// create the file if it doesn't exist
      	   if (!file2.exists()) {
 				file2.createNewFile();
-     	   }
+     	   }*/
+     	   
         if (easyLVL2.isSelected()) {
         		String content="F:"+Hfield.getText()+":"+LRfield.getText()+":"+Lfield.getText();
-        		FileWriter fw = new FileWriter(file2.getAbsoluteFile());
+        		FileWriter fw = new FileWriter(file.getAbsoluteFile());
         		BufferedWriter bw = new BufferedWriter(fw);
         		bw.write(content);
         		bw.write("\r\n");
@@ -67,7 +69,7 @@ public class ConfigsController {
         }
         else if (hardLVL2.isSelected()) {
     		String content="D:"+Hfield.getText()+":"+LRfield.getText()+":"+Lfield.getText();
-    		FileWriter fw = new FileWriter(file2.getAbsoluteFile());
+    		FileWriter fw = new FileWriter(file.getAbsoluteFile());
     		BufferedWriter bw = new BufferedWriter(fw);
     		bw.write(facile);
     		bw.write("\r\n");
@@ -89,6 +91,10 @@ public class ConfigsController {
              }	 
          }
          */
+        Stage stage = (Stage) validateConfigs.getScene().getWindow();
+        // do what you have to do
+        stage.close();
+        
         
     }
 	 
@@ -97,7 +103,7 @@ public class ConfigsController {
 	@FXML
 	 <Toggle> void initialize() throws FileNotFoundException{
 		 
-		 File file = new File("C:\\Users\\ACHRAF\\eclipse-workspace\\JavaFXest\\resources\\config.txt");
+		 File file = new File("resources/config.txt");
          BufferedReader br = new BufferedReader(new FileReader(file));
          Scanner sc = new Scanner(file);        
          String facile=sc.nextLine();
@@ -147,10 +153,8 @@ public class ConfigsController {
         			RadioButton rb = (RadioButton)group.getSelectedToggle();
         			 if (rb != null) {
                          String s = rb.getText();
-                         System.out.print(s);
+                         //System.out.print(s);
                          if (s.equals("EASY")) {
-             				System.out.print("Tets");
-             				// change the label
              				Hfield.setText(facileTab[1]);
              	        	LRfield.setText(facileTab[2]);
              	        	Lfield.setText(facileTab[3]);

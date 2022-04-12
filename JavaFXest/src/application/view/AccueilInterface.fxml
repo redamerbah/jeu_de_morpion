@@ -8,30 +8,36 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="316.0" prefWidth="605.0" styleClass="anchobackground" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.AccueilController">
+<AnchorPane fx:id="anchorPane" minHeight="450.0" minWidth="700.0" prefHeight="316.0" prefWidth="605.0" styleClass="anchobackground" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.AccueilController">
     <children>
-        <Button fx:id="IABtn" layoutX="323.0" layoutY="251.0" mnemonicParsing="false" onAction="#OnClickIABtn" prefHeight="42.0" prefWidth="258.0" styleClass="buttonblue" stylesheets="@../application.css" text="JOUER CONTRE L'IA" />
-         <Button fx:id="HumanBtn" layoutX="24.0" layoutY="251.0" mnemonicParsing="false" onAction="#OnClickHumanBtn" prefHeight="42.0" prefWidth="258.0" styleClass="buttonblue" stylesheets="@../application.css" text="JOUER CONTRE L'HUMAIN" />
+        <Button fx:id="IABtn" layoutX="373.0" layoutY="334.0" mnemonicParsing="false" onAction="#OnClickIABtn" prefHeight="71.0" prefWidth="290.0" styleClass="buttonblue" stylesheets="@../application.css" text="JOUER CONTRE L'IA" />
+         <Button fx:id="HumanBtn" layoutX="34.0" layoutY="334.0" mnemonicParsing="false" onAction="#OnClickHumanBtn" prefHeight="71.0" prefWidth="290.0" styleClass="buttonblue" stylesheets="@../application.css" text="JOUER CONTRE L'HUMAIN" />
 
-        <Text fx:id="text" layoutX="2.0" layoutY="104.0" strikethrough="true" stroke="#1668de" strokeType="OUTSIDE" strokeWidth="2.0" text="TIC TAC TOE" textAlignment="CENTER" wrappingWidth="602.0">
+        <Text fx:id="text" layoutX="49.0" layoutY="111.0" stroke="#1668de" strokeType="OUTSIDE" strokeWidth="2.0" text="TIC TAC TOE" textAlignment="CENTER" wrappingWidth="602.0">
          <font>
             <Font size="36.0" />
          </font></Text>
      
-      <MenuBar prefHeight="44.0" prefWidth="605.0" styleClass="menu" stylesheets="@../application.css">
+      <MenuBar prefHeight="44.0" prefWidth="700.0" styleClass="menu" stylesheets="@../application.css">
         <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="New" />
-            </items>
-          </Menu>
           <Menu mnemonicParsing="false" text="Edit">
             <items>
                   <MenuItem mnemonicParsing="false" onAction="#EditModels" text="Edit Models" />
                   <MenuItem mnemonicParsing="false" onAction="#EditConfigs" text="Edit configuration" />
             </items>
           </Menu>
+          <Menu mnemonicParsing="false" text="About">
+            <items>
+              <MenuItem fx:id="AboutAuthBtn" mnemonicParsing="false" onAction="#OnClickAboutAuthors" text="Authors" />
+                  <MenuItem fx:id="AboutRulesBtn" mnemonicParsing="false" onAction="#OnClickAboutRules" text="Rules" />
+            </items>
+          </Menu>
         </menus>
       </MenuBar>
+      <Text fx:id="underlinne" layoutX="49.0" layoutY="97.0" stroke="#1668de" strokeType="OUTSIDE" strokeWidth="2.0" text="___________________" textAlignment="CENTER" wrappingWidth="602.0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
     </children>
 </AnchorPane>

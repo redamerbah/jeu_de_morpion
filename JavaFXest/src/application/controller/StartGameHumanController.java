@@ -3,6 +3,7 @@ package application.controller;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import javafx.animation.RotateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,8 +14,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import javafx.scene.text.Font;
-
 
 
 public class StartGameHumanController {
@@ -68,11 +69,12 @@ public class StartGameHumanController {
 	    
 	    @FXML
 	    private Label TextWinner;
+	    
+	    @FXML
+	    private Button BackBtn;
 	
 
-	public void initialize(){		
-		//System.out.println("ALLO");
-		//System.out.println("jOUEUR :"+PlayerVsPlayerController.name1);
+	public void initialize(){
 		if ((PlayerVsPlayerController.name1).equals("")) {
 			PlayerVsPlayerController.name1="Player1";
 		}
@@ -85,22 +87,16 @@ public class StartGameHumanController {
 		}
 		else {	
 			namePlayerLabel2.setText(PlayerVsPlayerController.name2);
-			}
-		TextWinner.setVisible(false);
-		winnerName.setVisible(false);
-		Button0.setFocusTraversable(false);
-		Button1.setFocusTraversable(false);
-		Button2.setFocusTraversable(false);
-		Button3.setFocusTraversable(false);
-		Button4.setFocusTraversable(false);
-		Button5.setFocusTraversable(false);
-		Button6.setFocusTraversable(false);
-		Button7.setFocusTraversable(false);
-		Button8.setFocusTraversable(false);
-		
-		
-		
+			}		
 	}
+	
+	@FXML
+	void OnClickBack6() throws IOException {
+	    	Parent root= FXMLLoader.load(getClass().getResource("/application/view/PlayerVsPlayer.fxml"));
+		    Stage window=(Stage) BackBtn.getScene().getWindow();
+		    window.setTitle("Morpion");
+		    window.setScene(new Scene(root));
+	   }
 	
 	@FXML
 	void Btn0Click(){
@@ -218,27 +214,41 @@ public class StartGameHumanController {
 		if ((b1.getText()+b2.getText()+b3.getText()).equals("XXX") ) {
 			System.out.println("The Winnner is "+ PlayerVsPlayerController.name1);
 			
-			b1.setStyle("-fx-background-color: #32CD32	; ");
-			b2.setStyle("-fx-background-color: #32CD32	; ");
-			b3.setStyle("-fx-background-color: #32CD32	; ");
+			b1.setStyle("-fx-background-color: #EAF411	; ");
+			b2.setStyle("-fx-background-color: #EAF411	; ");
+			b3.setStyle("-fx-background-color: #EAF411	; ");
 			
 			DisableAll();
 			TextWinner.setVisible(true);
 			winnerName.setText(PlayerVsPlayerController.name1);
 			winnerName.setVisible(true);
+		
 		}
 		else if ((b1.getText()+b2.getText()+b3.getText()).equals("OOO")){
 			System.out.println("The Winnner is "+ PlayerVsPlayerController.name2);
 			
-			b1.setStyle("-fx-background-color: #32CD32	; ");
-			b2.setStyle("-fx-background-color: #32CD32	; ");
-			b3.setStyle("-fx-background-color: #32CD32	; ");
+			b1.setStyle("-fx-background-color: #EAF411	; ");
+			b2.setStyle("-fx-background-color: #EAF411	; ");
+			b3.setStyle("-fx-background-color: #EAF411	; ");
 			
 			DisableAll();
 			TextWinner.setVisible(true);
 			winnerName.setText(PlayerVsPlayerController.name2);
 			winnerName.setVisible(true);
 		}
+		else if (compteur==9){
+			System.out.println("EQUAL");
+			DisableAll();
+			//TextWinner.setVisible(true);
+			winnerName.setText("Egalitééé obscurité");
+			winnerName.setVisible(true);
+		}
+		
+		RotateTransition rt=new RotateTransition(Duration. millis(500), winnerName);
+		rt.setByAngle(-5);
+		rt.setCycleCount(9);
+		rt.setAutoReverse(true);
+		rt.play();
 	}
 	/*
 	 
@@ -261,6 +271,7 @@ public class StartGameHumanController {
 			winnerName.setText(PlayerVsPlayerController.name2);
 			winnerName.setVisible(true);
 		}
+		
 		
 		
 	};
@@ -336,8 +347,9 @@ public class StartGameHumanController {
 		Btn.setDisable(true);
 		compteur++;
 		checkIfGameIsOver();
-		
 	}
+	
+	
 	
 	
 	}

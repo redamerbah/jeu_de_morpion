@@ -7,20 +7,20 @@
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ConfigsController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" styleClass="anchobackground0" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ConfigsController">
    <children>
-      <TextField fx:id="Hfield" layoutX="33.0" layoutY="213.0" text="H" />
-      <TextField fx:id="LRfield" layoutX="224.0" layoutY="213.0" text="LR" />
-      <TextField fx:id="Lfield" layoutX="416.0" layoutY="213.0" text="L" />
-      <Label layoutX="79.0" layoutY="181.0" text="HAUTEUR" />
-      <Label layoutX="260.0" layoutY="181.0" text="Learning Rate" />
-      <Label layoutX="463.0" layoutY="181.0" text="Largeur" />
-      <Button fx:id="validateConfigs" layoutX="238.0" layoutY="309.0" mnemonicParsing="false" onAction="#EditConfigs" prefHeight="42.0" prefWidth="90.0" text="Validate" />
-      <RadioButton fx:id="easyLVL2" layoutX="265.0" layoutY="57.0" mnemonicParsing="false" selected="true" text="EASY">
+      <TextField fx:id="Hfield" layoutX="29.0" layoutY="95.0" prefHeight="26.0" prefWidth="101.0" text="H" />
+      <TextField fx:id="LRfield" layoutX="195.0" layoutY="95.0" prefHeight="26.0" prefWidth="102.0" text="LR" />
+      <TextField fx:id="Lfield" layoutX="360.0" layoutY="95.0" prefHeight="18.0" prefWidth="102.0" text="L" />
+      <Label layoutX="26.0" layoutY="63.0" text="Hidden Layer Size" />
+      <Label layoutX="205.0" layoutY="63.0" text="Learning Rate" />
+      <Label layoutX="337.0" layoutY="63.0" text="number Of hidden Layers" />
+      <Button fx:id="validateConfigs" layoutX="187.0" layoutY="243.0" mnemonicParsing="false" onAction="#EditConfigs" prefHeight="42.0" prefWidth="126.0" styleClass="buttonblue" stylesheets="@../application.css" text="Validate" />
+      <RadioButton fx:id="easyLVL2" layoutX="216.0" layoutY="162.0" mnemonicParsing="false" selected="true" text="EASY">
          <toggleGroup>
             <ToggleGroup fx:id="LevelHE" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="hardLVL2" layoutX="264.0" layoutY="87.0" mnemonicParsing="false" text="HARD" toggleGroup="$LevelHE" />
+      <RadioButton fx:id="hardLVL2" layoutX="215.0" layoutY="192.0" mnemonicParsing="false" text="HARD" toggleGroup="$LevelHE" />
    </children>
 </AnchorPane>

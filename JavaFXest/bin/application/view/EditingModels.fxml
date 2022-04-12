@@ -4,9 +4,9 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ModelsController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="anchobackground0" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ModelsController">
    <children>
-      <Button fx:id="deleteBtn" layoutX="256.0" layoutY="298.0" mnemonicParsing="false" onAction="#DeleteModel" prefHeight="26.0" prefWidth="87.0" text="DELETE" />
-      <ListView fx:id="ModelsList" layoutX="181.0" layoutY="61.0" prefHeight="200.0" prefWidth="238.0" />
+      <Button fx:id="deleteBtn" layoutX="244.0" layoutY="298.0" mnemonicParsing="false" onAction="#DeleteModel" prefHeight="42.0" prefWidth="111.0" styleClass="buttonblue" stylesheets="@../application.css" text="DELETE" />
+      <ListView fx:id="ModelsList" layoutX="181.0" layoutY="61.0" prefHeight="200.0" prefWidth="238.0" styleClass="tab-game" stylesheets="@../application.css" />
    </children>
 </AnchorPane>

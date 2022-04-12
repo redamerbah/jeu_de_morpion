@@ -23,6 +23,9 @@ public class PlayerVsPlayerController {
 	
 	public static String name1;
 	public static String name2;
+	
+	@FXML
+	 private Button BackBtn;
 
     @FXML
     void StartPlaying(ActionEvent event) throws IOException {
@@ -39,4 +42,12 @@ public class PlayerVsPlayerController {
     	window.setTitle("Player Vs IA");
     	window.setScene(new Scene(root));*/
     }
+    
+    @FXML
+	 void OnClickBack4() throws IOException {
+	    	Parent root= FXMLLoader.load(getClass().getResource("/application/view/AccueilInterface.fxml"));
+		    Stage window=(Stage) BackBtn.getScene().getWindow();
+		    window.setTitle("Morpion");
+		    window.setScene(new Scene(root));
+	    }
 }
