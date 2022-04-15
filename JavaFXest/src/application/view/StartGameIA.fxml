@@ -37,14 +37,14 @@
             <Image url="@../../../resources/images/TicTacToe/Robot.png" />
          </image>
       </ImageView>
-      <Label fx:id="namePlayerLabel" alignment="CENTER" layoutX="113.0" layoutY="131.0" prefHeight="30.0" prefWidth="100.0" text="PLAYER 1" visible="false" />
+      <Label fx:id="namePlayerLabel" alignment="CENTER" layoutX="113.0" layoutY="131.0" prefHeight="30.0" prefWidth="100.0" text="PLAYER 1" />
       <Label layoutX="141.0" layoutY="234.0" text="ROBOT" />
-      <Label fx:id="namePlayerLabel1" alignment="CENTER" layoutX="110.0" layoutY="155.0" prefHeight="30.0" prefWidth="100.0" text="X" textFill="#362fff">
+      <Label fx:id="LabelP1" alignment="CENTER" layoutX="110.0" layoutY="155.0" prefHeight="30.0" prefWidth="100.0" text="X" textFill="#362fff">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <Label fx:id="namePlayerLabel11" alignment="CENTER" layoutX="110.0" layoutY="200.0" prefHeight="30.0" prefWidth="100.0" text="0" textFill="#ff3030">
+      <Label fx:id="LabelP2" alignment="CENTER" layoutX="110.0" layoutY="200.0" prefHeight="30.0" prefWidth="100.0" text="0" textFill="#ff3030">
          <font>
             <Font size="23.0" />
          </font>
@@ -56,5 +56,10 @@
       </Label>
       <Button fx:id="ReplayBtn" focusTraversable="false" layoutX="364.0" layoutY="395.0" mnemonicParsing="false" onAction="#Replay" prefHeight="42.0" prefWidth="148.0" styleClass="buttonblue" stylesheets="@../application.css" text="REPLAY" />
       <Button fx:id="BackBtn" focusTraversable="false" layoutX="167.0" layoutY="395.0" mnemonicParsing="false" onAction="#OnClickBack5" prefHeight="42.0" prefWidth="148.0" styleClass="buttonblue" stylesheets="@../application.css" text="BACK" />
+      <ImageView fx:id="Crown" fitHeight="121.0" fitWidth="148.0" layoutX="104.0" layoutY="-94.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../resources/images/TicTacToe/crown2.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

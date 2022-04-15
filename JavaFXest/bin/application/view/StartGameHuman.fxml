@@ -20,27 +20,27 @@
             <Button fx:id="Button6" focusTraversable="false" layoutX="94.0" layoutY="196.0" mnemonicParsing="false" onAction="#Btn6Click" prefHeight="97.0" prefWidth="100.0" styleClass="buttongame" stylesheets="@../application.css" />
             <Button fx:id="Button7" focusTraversable="false" layoutX="195.0" layoutY="196.0" mnemonicParsing="false" onAction="#Btn7Click" prefHeight="97.0" prefWidth="100.0" styleClass="buttongame" stylesheets="@../application.css" />
             <Button fx:id="Button8" focusTraversable="false" layoutX="294.0" layoutY="196.0" mnemonicParsing="false" onAction="#Btn8Click" prefHeight="97.0" prefWidth="100.0" styleClass="buttongame" stylesheets="@../application.css" />
-              <Label fx:id="winnerName" alignment="CENTER" contentDisplay="CENTER" layoutX="60.0" layoutY="107.0" prefHeight="98.0" prefWidth="404.0" text="PLAYER" textFill="#943e16" visible="false">
+              <Label fx:id="winnerName" alignment="CENTER" contentDisplay="CENTER" layoutX="42.0" layoutY="94.0" prefHeight="98.0" prefWidth="404.0" text="PLAYER" textFill="#943e16" visible="false">
                <font>
-                  <Font size="70.0" />
+                  <Font name="Jokerman" size="53.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
       <Label fx:id="namePlayerLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="98.0" layoutY="131.0" prefHeight="30.0" prefWidth="100.0" text="PLAYER 1" />
-      <Label fx:id="namePlayerLabel1" alignment="CENTER" layoutX="95.0" layoutY="155.0" prefHeight="30.0" prefWidth="100.0" text="X" textFill="#362fff">
+      <Label fx:id="LabelP1" alignment="CENTER" layoutX="95.0" layoutY="155.0" prefHeight="30.0" prefWidth="100.0" text="X" textFill="#362fff">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <Label fx:id="namePlayerLabel11" alignment="CENTER" layoutX="95.0" layoutY="200.0" prefHeight="30.0" prefWidth="100.0" text="0" textFill="#ff3030">
+      <Label fx:id="LabelP2" alignment="CENTER" layoutX="95.0" layoutY="200.0" prefHeight="30.0" prefWidth="100.0" text="0" textFill="#ff3030">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-     <Label fx:id="TextWinner" alignment="CENTER" layoutX="291.0" layoutY="-34.0" prefHeight="139.0" prefWidth="428.0" text="THE WINNER IS " textAlignment="CENTER" textFill="#943e16" visible="false">
+     <Label fx:id="TextWinner" alignment="CENTER" layoutX="271.0" layoutY="-39.0" prefHeight="139.0" prefWidth="428.0" text="THE WINNER IS " textAlignment="CENTER" textFill="#943e16" visible="false">
          <font>
-            <Font size="49.0" />
+            <Font name="Jokerman" size="49.0" />
          </font>
       </Label>
       <Label fx:id="namePlayerLabel2" alignment="CENTER" contentDisplay="CENTER" layoutX="98.0" layoutY="227.0" prefHeight="30.0" prefWidth="100.0" text="PLAYER 2" />
@@ -56,5 +56,10 @@
          </image>
       </ImageView>
       <Button fx:id="BackBtn" layoutX="161.0" layoutY="372.0" mnemonicParsing="false" onAction="#OnClickBack6" styleClass="buttonblue" text="BACK TO MENU" />
+   		<ImageView fx:id="Crown" fitHeight="121.0" fitWidth="148.0" layoutX="83.0" layoutY="-94.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../resources/images/TicTacToe/crown2.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

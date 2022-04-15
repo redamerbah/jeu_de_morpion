@@ -15,29 +15,28 @@ import javafx.stage.Stage;
 
 public class AboutAuthorsController {
 
-	
 	@FXML
-    private Label AuthorsName1;
+	private Label AuthorsName1;
 
-    @FXML
-    private Label AuthorsName2;
+	@FXML
+	private Label AuthorsName2;
 
-    @FXML
-    private Label AuthorsTitle;
+	@FXML
+	private Label AuthorsTitle;
 
-    @FXML
-    private Button BackBtn;
-    
-    @FXML
-    void initialize() {
-    	
-    }
+	@FXML
+	private Button BackBtn;
 
-    @FXML
-    void OnClickBack() throws IOException {
-    	Parent root= FXMLLoader.load(getClass().getResource("/application/view/AccueilInterface.fxml"));
-	    Stage window=(Stage) BackBtn.getScene().getWindow();
-	    window.setTitle("Morpion");
-	    window.setScene(new Scene(root));
-    }
+	@FXML
+	void initialize() {
+
+	}
+
+	@FXML
+	void OnClickBack() throws IOException {
+		Parent root = FXMLLoader.load(getClass().getResource("/application/view/AccueilInterface.fxml"));
+		Stage window = (Stage) BackBtn.getScene().getWindow();
+		window.setTitle("Morpion");
+		window.setScene(new Scene(root));
+	}
 }

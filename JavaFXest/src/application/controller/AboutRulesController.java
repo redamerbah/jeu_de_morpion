@@ -16,17 +16,17 @@ import javafx.stage.Stage;
 public class AboutRulesController {
 
 
-    @FXML
-    private Button BackBtn2;
-    
-    @FXML
-    private Label RulesTitle;
-    
-    @FXML
-    void OnClickBack2() throws IOException {
-    	Parent root= FXMLLoader.load(getClass().getResource("/application/view/AccueilInterface.fxml"));
-	    Stage window=(Stage) BackBtn2.getScene().getWindow();
-	    window.setTitle("Morpion");
-	    window.setScene(new Scene(root));
-    }
+	@FXML
+	private Button BackBtn2;
+
+	@FXML
+	private Label RulesTitle;
+
+	@FXML
+	void OnClickBack2() throws IOException {
+		Parent root = FXMLLoader.load(getClass().getResource("/application/view/AccueilInterface.fxml"));
+		Stage window = (Stage) BackBtn2.getScene().getWindow();
+		window.setTitle("Morpion");
+		window.setScene(new Scene(root));
+	}
 }

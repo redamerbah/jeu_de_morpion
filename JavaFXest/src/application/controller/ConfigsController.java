@@ -21,191 +21,128 @@ import javafx.stage.Stage;
 
 public class ConfigsController {
 
-	 
+	@FXML
+	private TextField Hfield;
 
 	@FXML
-	 private TextField Hfield;
+	private TextField LRfield;
 
-	 @FXML
-	 private TextField LRfield;
-	 
-	 @FXML
-	 private TextField Lfield;
-
-	 @FXML
-	 private Button validateConfigs;
-	 
-	 @FXML
-	 private RadioButton easyLVL2;
-
-	 @FXML
-	 private RadioButton hardLVL2;
-
-	 @FXML
-	 void EditConfigs(ActionEvent event) throws IOException {
-		 File file = new File("resources/config.txt");
-         BufferedReader br = new BufferedReader(new FileReader(file));
-         Scanner sc = new Scanner(file);        
-         String facile=sc.nextLine();
-         String difficile=sc.nextLine();
-         String[] facileTab = facile.split(":"); 
-         String[] difficileTab = difficile.split(":"); 
-		 /*File file2 = new File("resources/config2.txt");
-		 
-     	 
-     	// create the file if it doesn't exist
-     	   if (!file2.exists()) {
-				file2.createNewFile();
-     	   }*/
-     	   
-        if (easyLVL2.isSelected()) {
-        		String content="F:"+Hfield.getText()+":"+LRfield.getText()+":"+Lfield.getText();
-        		FileWriter fw = new FileWriter(file.getAbsoluteFile());
-        		BufferedWriter bw = new BufferedWriter(fw);
-        		bw.write(content);
-        		bw.write("\r\n");
-        		bw.write(difficile);
-        		bw.close();
-        }
-        else if (hardLVL2.isSelected()) {
-    		String content="D:"+Hfield.getText()+":"+LRfield.getText()+":"+Lfield.getText();
-    		FileWriter fw = new FileWriter(file.getAbsoluteFile());
-    		BufferedWriter bw = new BufferedWriter(fw);
-    		bw.write(facile);
-    		bw.write("\r\n");
-    		bw.write(content);
-    		bw.close();
-        }
-        	 
-        	 /*
-        	 FirstController.h=Integer.parseInt(facileTab[1]);
-        	 FirstController.lr=Double.parseDouble(facileTab[2]);
-        	 FirstController.l=Integer.parseInt(facileTab[3]);
-        	 System.out.println("****************** FACILE ******************");
-        	 Hfield.setText(facileTab[1]);
-        	 LRfield.setText(facileTab[2]);
-        	 Lfield.setText(facileTab[3]);
-        	 for(int i=0; i<facileTab.length; i++)  
-             {  
-             	System.out.println(facileTab[i]);  
-             }	 
-         }
-         */
-        Stage stage = (Stage) validateConfigs.getScene().getWindow();
-        // do what you have to do
-        stage.close();
-        
-        
-    }
-	 
-	 
-	 @SuppressWarnings("unchecked")
 	@FXML
-	 <Toggle> void initialize() throws FileNotFoundException{
-		 
-		 File file = new File("resources/config.txt");
-         BufferedReader br = new BufferedReader(new FileReader(file));
-         Scanner sc = new Scanner(file);        
-         String facile=sc.nextLine();
-         String difficile=sc.nextLine();
-         String[] facileTab = facile.split(":"); 
-         String[] difficileTab = difficile.split(":");   
-         
-         
-         if (easyLVL2.isSelected()) {
-        	 
-        	 FirstController.h=Integer.parseInt(facileTab[1]);
-        	 FirstController.lr=Double.parseDouble(facileTab[2]);
-        	 FirstController.l=Integer.parseInt(facileTab[3]);
-        	 System.out.println("****************** FACILE ******************");
-        	 Hfield.setText(facileTab[1]);
-        	 LRfield.setText(facileTab[2]);
-        	 Lfield.setText(facileTab[3]);
-        	 for(int i=0; i<facileTab.length; i++)  
-             {  
-             	System.out.println(facileTab[i]);  
-             }
-        	 
-         }
-        
-         else if (hardLVL2.isSelected()) {
-        	 FirstController.h=Integer.parseInt(difficileTab[1]);
-        	 FirstController.lr=Double.parseDouble(difficileTab[2]);
-        	 FirstController.l=Integer.parseInt(difficileTab[3]);
-        	 
-        	 Hfield.setText(difficileTab[1]);
-        	 LRfield.setText(difficileTab[2]);
-        	 Lfield.setText(difficileTab[3]);
-        	 System.out.println("****************** DIFFICILE ******************");
-        	 for(int i=0; i<facileTab.length; i++)  
-        	 {  
-        		 System.out.println(difficileTab[i]);  
-        	 }
-         }
-    	 
-         
-        final ToggleGroup group = new ToggleGroup(); 
-        easyLVL2.setToggleGroup(group);
-        hardLVL2.setToggleGroup(group);
-        
-        group.selectedToggleProperty().addListener((ChangeListener<? super javafx.scene.control.Toggle>) new ChangeListener<Toggle>() {
-        		public void changed(ObservableValue<? extends Toggle> ob, Toggle o, Toggle n) {
-        			RadioButton rb = (RadioButton)group.getSelectedToggle();
-        			 if (rb != null) {
-                         String s = rb.getText();
-                         //System.out.print(s);
-                         if (s.equals("EASY")) {
-             				Hfield.setText(facileTab[1]);
-             	        	LRfield.setText(facileTab[2]);
-             	        	Lfield.setText(facileTab[3]);
-             			}
-             			else if (s.equals("HARD")) {
-             				Hfield.setText(difficileTab[1]);
-            	        	LRfield.setText(difficileTab[2]);
-            	        	Lfield.setText(difficileTab[3]);
-             			}
-             			else {
-             				System.out.print("Veuillez selectionner un choix");             				
-             			}
+	private TextField Lfield;
 
-                     }
-        			
+	@FXML
+	private Button validateConfigs;
+
+	@FXML
+	private RadioButton easyLVL2;
+
+	@FXML
+	private RadioButton hardLVL2;
+
+	@SuppressWarnings("unchecked")
+	@FXML
+	<Toggle> void initialize() throws FileNotFoundException {
+
+		// Lecture du fichier
+		File file = new File("resources/config.txt");
+		BufferedReader br = new BufferedReader(new FileReader(file));
+		Scanner sc = new Scanner(file);
+		String facile = sc.nextLine();
+		String difficile = sc.nextLine();
+		String[] facileTab = facile.split(":");
+		String[] difficileTab = difficile.split(":");
+
+		if (easyLVL2.isSelected()) {
+
+			FirstController.h = Integer.parseInt(facileTab[1]);
+			FirstController.lr = Double.parseDouble(facileTab[2]);
+			FirstController.l = Integer.parseInt(facileTab[3]);
+			System.out.println("****************** FACILE ******************");
+			Hfield.setText(facileTab[1]);
+			LRfield.setText(facileTab[2]);
+			Lfield.setText(facileTab[3]);
+			for (int i = 0; i < facileTab.length; i++) {
+				System.out.println(facileTab[i]);
 			}
-        });
 
-         /*if (easyLVL2.isSelected()) {
-        	 
-        	 FirstController.h=Integer.parseInt(facileTab[1]);
-        	 FirstController.lr=Double.parseDouble(facileTab[2]);
-        	 FirstController.l=Integer.parseInt(facileTab[3]);
-        	 System.out.println("****************** FACILE ******************");
-        	 Hfield.setText(facileTab[1]);
-        	 LRfield.setText(facileTab[2]);
-        	 Lfield.setText(facileTab[3]);
-        	 for(int i=0; i<facileTab.length; i++)  
-             {  
-             	System.out.println(facileTab[i]);  
-             }
-        	 
-         }
-        
-         else if (hardLVL2.isSelected()) {
-        	 FirstController.h=Integer.parseInt(difficileTab[1]);
-        	 FirstController.lr=Double.parseDouble(difficileTab[2]);
-        	 FirstController.l=Integer.parseInt(difficileTab[3]);
-        	 
-        	 Hfield.setText(difficileTab[1]);
-        	 LRfield.setText(difficileTab[2]);
-        	 Lfield.setText(difficileTab[3]);
-        	 System.out.println("****************** DIFFICILE ******************");
-        	 for(int i=0; i<facileTab.length; i++)  
-        	 {  
-        		 System.out.println(difficileTab[i]);  
-        	 }
-         }*/
-		 
-	 }
-		 
+		}
+
+		else if (hardLVL2.isSelected()) {
+			FirstController.h = Integer.parseInt(difficileTab[1]);
+			FirstController.lr = Double.parseDouble(difficileTab[2]);
+			FirstController.l = Integer.parseInt(difficileTab[3]);
+
+			Hfield.setText(difficileTab[1]);
+			LRfield.setText(difficileTab[2]);
+			Lfield.setText(difficileTab[3]);
+			System.out.println("****************** DIFFICILE ******************");
+			for (int i = 0; i < facileTab.length; i++) {
+				System.out.println(difficileTab[i]);
+			}
+		}
+		final ToggleGroup group = new ToggleGroup();
+		easyLVL2.setToggleGroup(group);
+		hardLVL2.setToggleGroup(group);
+
+		// Listener qui remplit les textField avec leur valeur correspondante depuis le
+		// fichier config.txt
+		group.selectedToggleProperty()
+				.addListener((ChangeListener<? super javafx.scene.control.Toggle>) new ChangeListener<Toggle>() {
+					public void changed(ObservableValue<? extends Toggle> ob, Toggle o, Toggle n) {
+						RadioButton rb = (RadioButton) group.getSelectedToggle();
+						if (rb != null) {
+							String s = rb.getText();
+							if (s.equals("EASY")) {
+								Hfield.setText(facileTab[1]);
+								LRfield.setText(facileTab[2]);
+								Lfield.setText(facileTab[3]);
+							} else if (s.equals("HARD")) {
+								Hfield.setText(difficileTab[1]);
+								LRfield.setText(difficileTab[2]);
+								Lfield.setText(difficileTab[3]);
+							} else {
+								System.out.print("Veuillez selectionner un choix");
+							}
+
+						}
+					}
+				});
+
+	}
+
+	// Fonction qui permet d'écrire sur le fichier les valeurs saisis par
+	// l'utilisateur dans les textField
+	@FXML
+	void EditConfigs(ActionEvent event) throws IOException {
+		File file = new File("resources/config.txt");
+		BufferedReader br = new BufferedReader(new FileReader(file));
+		Scanner sc = new Scanner(file);
+		String facile = sc.nextLine();
+		String difficile = sc.nextLine();
+		String[] facileTab = facile.split(":");
+		String[] difficileTab = difficile.split(":");
+
+		if (easyLVL2.isSelected()) {
+			String content = "F:" + Hfield.getText() + ":" + LRfield.getText() + ":" + Lfield.getText();
+			FileWriter fw = new FileWriter(file.getAbsoluteFile());
+			BufferedWriter bw = new BufferedWriter(fw);
+			bw.write(content);
+			bw.write("\r\n");
+			bw.write(difficile);
+			bw.close();
+		} else if (hardLVL2.isSelected()) {
+			String content = "D:" + Hfield.getText() + ":" + LRfield.getText() + ":" + Lfield.getText();
+			FileWriter fw = new FileWriter(file.getAbsoluteFile());
+			BufferedWriter bw = new BufferedWriter(fw);
+			bw.write(facile);
+			bw.write("\r\n");
+			bw.write(content);
+			bw.close();
+		}
+
+		Stage stage = (Stage) validateConfigs.getScene().getWindow();
+		stage.close();
+
+	}
+
 }
-
-
